@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Visulizers/Visualizer.tscn" type="PackedScene" id=1]
+
+[sub_resource type="AudioStreamMicrophone" id=1]
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer"]
+stream = SubResource( 1 )
+autoplay = true
+bus = "Record"
+
+[node name="Visualizer" parent="." instance=ExtResource( 1 )]
